@@ -4,7 +4,7 @@ import { FaRegBell } from "react-icons/fa";
 
 function TopNavbar() {
   return (
-    <nav className='flex justify-between  '>
+    <nav className='flex justify-between  items-center'>
         <h1 className='flex gap-2 text-[#7E22CE] text-[36px] font-extrabold'>
           <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M37.4727 46.8739L29.8109 43.043C27.6752 41.9862 25.1873 41.9862 23.0517 43.043L15.3678 46.8739C8.80679 50.1544 1.87148 43.087 5.3061 36.592L7.11149 33.2014C7.35367 32.7171 7.74998 32.3428 8.23435 32.1446L36.0857 19.617C37.2306 19.1106 38.5736 19.573 39.146 20.6738L47.5344 36.614C50.9691 43.087 44.0338 50.1544 37.4727 46.8739Z" fill="#7E22CE" />
@@ -12,7 +12,7 @@ function TopNavbar() {
           </svg>
           LAMA.
         </h1>
-        <div className='flex gap-10'>
+        <div className='flex gap-3 md:gap-10'>
           <MdOutlineSettings size={'36px'} color='black' />
           <FaRegBell size={'36px'} color='black'/>
         </div>

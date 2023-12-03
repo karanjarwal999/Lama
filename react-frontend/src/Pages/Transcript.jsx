@@ -33,7 +33,7 @@ function Transcript() {
       {
         // upadting the poadcast 
          dispatch(updatePodcast(Podcast.id,{description:newdes},showToast))
-         Navigate('/Uplode')
+         Navigate('/Upload')
       }
     
       // fetching data of poadcast
@@ -56,7 +56,7 @@ function Transcript() {
     <div className='flex justify-between items-center my-10'>
         <h3 className='text-[#7E22CE] text-[30px] font-bold '>Edit Transcript</h3>
          <div className='flex gap-3'>
-            <button onClick={()=>Navigate('/Uplode')} className='rounded py-2 font-semibold px-5 text-[15px] text-[red] border-[red] border-[2px]'>Discard</button>
+            <button onClick={()=>Navigate('/Upload')} className='rounded py-2 font-semibold px-5 text-[15px] text-[red] border-[red] border-[2px]'>Discard</button>
             { Podcast.description!==newdes ? <button onClick={handleSave} className='rounded py-2 font-semibold px-5 text-[15px] bg-black text-white '>Save & Exit</button>:null}
         </div>
     </div>

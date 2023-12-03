@@ -49,14 +49,14 @@ function Widget_Configurations() {
        {/* 3 tabs are created */}
       <Tabs >
         <TabList mb="1em" className="border-b-[2px] border-gray-300">
-          <Tab className="font-bold">Genaral</Tab>
+          <Tab className="font-bold">General</Tab>
           <Tab className="font-bold">Display</Tab>
           <Tab className="font-bold" isDisabled>Advanced</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
             <form className="flex flex-col gap-2">
-              <label className="font-semibold text-[25px] " htmlFor="name">
+              <label className="font-semibold text-[25px]  " htmlFor="name">
                 ChatBot Name
               </label>
               <div>
@@ -80,10 +80,10 @@ function Widget_Configurations() {
             </form>
           </TabPanel>
           <TabPanel>
-            <div className="grid grid-cols-2 gap-5 gap-x-10">
+            <div className="grid grid-cols-2 gap-5 gap-x-10 max-sm:flex max-sm:flex-col">
               <div>
                 <label
-                  className="font-semibold text-[25px]"
+                  className="font-semibold text-[25px] max-xl:text-[18px]"
                   htmlFor="pamaryColor"
                 >
                   Primary Color
@@ -97,7 +97,7 @@ function Widget_Configurations() {
 
               <div>
                 <label
-                  className="font-semibold text-[25px]"
+                  className="font-semibold text-[25px] max-xl:text-[18px]"
                   htmlFor="fontColor"
                 >
                   Font Color
@@ -110,7 +110,7 @@ function Widget_Configurations() {
               </div>
 
               <div>
-                <label className="font-semibold text-[25px]" htmlFor="fontSize">
+                <label className="font-semibold text-[25px] max-xl:text-[18px]" htmlFor="fontSize">
                   Font Size (in px)
                 </label>
                 <div>
@@ -121,7 +121,7 @@ function Widget_Configurations() {
 
               <div>
                 <label
-                  className="font-semibold text-[25px]"
+                  className="font-semibold text-[25px] max-xl:text-[18px]"
                   htmlFor="CharHeight"
                 >
                   Chat Height (in % of total screen)
@@ -134,19 +134,19 @@ function Widget_Configurations() {
 
               <div className="flex justify-between items-center col-span-2">
                 <div>
-                  <h5 className="font-semibold text-[25px]">Show Sources</h5>
+                  <h5 className="font-semibold text-[25px] max-xl:text-[18px]">Show Sources</h5>
                   <p className="text-[12px]">Lorem ipsum dolor sit amet.</p>
                 </div>
                 <Switch size="lg" defaultChecked />
               </div>
             </div>
             <hr className="my-[30px] border-[1px] border-gray-300" />
-            <h4 className="text-[#7E22CE] font-bold text-[25px] mb-3">
+            <h4 className="text-[#7E22CE] font-bold text-[25px] max-xl:text-[18px] mb-3">
               Chat Icon
             </h4>
-            <div className="grid grid-cols-2 gap-5 gap-x-10">
+            <div className="grid grid-cols-2 gap-5 gap-x-10 max-sm:flex max-sm:flex-col">
               <div>
-                <label className="font-semibold text-[25px]" htmlFor="chatSize">
+                <label className="font-semibold text-[25px] max-xl:text-[18px]" htmlFor="chatSize">
                   Chat Icon Size
                 </label>
                 <Select type="text" id="chatSize">
@@ -159,7 +159,7 @@ function Widget_Configurations() {
               </div>
               <div>
                 <label
-                  className="font-semibold text-[25px]"
+                  className="font-semibold text-[25px] max-xl:text-[18px]"
                   htmlFor="positionScreenr"
                 >
                   Position on Screen
@@ -174,7 +174,7 @@ function Widget_Configurations() {
               </div>
               <div>
                 <label
-                  className="font-semibold text-[25px]"
+                  className="font-semibold text-[25px] max-xl:text-[18px]"
                   htmlFor="distanceH"
                 >
                   Horizontal Distance (in px)
@@ -183,7 +183,7 @@ function Widget_Configurations() {
               </div>
               <div>
                 <label
-                  className="font-semibold text-[25px]"
+                  className="font-semibold text-[25px] max-xl:text-[18px]"
                   htmlFor="distanceB"
                 >
                   Distance from Bottom (in px)

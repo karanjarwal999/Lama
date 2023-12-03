@@ -14,16 +14,16 @@ function HorizontalLocater() {
     
   return (
     <div className='flex justify-between ' >
-      <h3 className='flex gap-3 items-center text-[#7E22CE] text-[25px]'><AiOutlineHome size={"25px"}/> <span className='font-semibold capitalize'>{Project?.name}</span> / <span className='font-semibold'>{location.pathname.slice(1,location.pathname.length)}</span></h3>
-      <div className='flex items-center gap-[10px]'><IoMdArrowDropdown /><span className='text-[15px] font-bold'>EN</span>
-      <img
+    <h3 className='flex gap-2 items-center text-[#7E22CE] text-[25px] max-lg:text-[20px] max-sm:text-[15px]'><AiOutlineHome size={"25px"}/> <span className='font-semibold capitalize'>{Project?.name}</span>/<span className='font-semibold'>{location.pathname.slice(1,location.pathname.length)}</span></h3>
+    <div className='flex items-center gap-[10px] max-sm:gap-[5px]'><IoMdArrowDropdown /><span className='text-[15px] font-bold'>EN</span>
+    <img
         className="w-[30px] h-[30px] m-auto"
         src="/language.svg"
         alt="Example SVG"
       />
 
-      <CgBell size={"30px"} /></div>
-    </div>
+    <CgBell size={"30px"} /></div>
+  </div>
   )
 }
 

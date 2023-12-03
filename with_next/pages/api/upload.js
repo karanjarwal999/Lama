@@ -1,11 +1,10 @@
 import multer from 'multer';
 import Project from './models/Project';
-import Podcast from './models/podcast';
-import {v2 as cloudinary} from "cloudinary"
+import dbConnect from './utils/dbConnect';
 
 export default async function handler(req, res) {
+    await dbConnect();
     try {
-    
         const project = await Project.findByIdAndUpdate(req.body.id,{"image":req.body.image})
         
         // Return success response with the image URL
@@ -14,5 +13,4 @@ export default async function handler(req, res) {
         console.error(err);
         return res.status(500).json({ error: 'Server Error' });
       }
-
 }

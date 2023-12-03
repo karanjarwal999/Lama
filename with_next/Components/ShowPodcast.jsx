@@ -30,11 +30,11 @@ function ShowPodcast({ Project }) {
       <h3 className="text-[#7E22CE] font-bold text-[40px] my-4 capitalize">
         {Project.name}
       </h3>
-      <div className="flex gap-5">
+      <div className="flex gap-5 max-lg:grid max-lg:grid-cols-2">
         {uplodeOption.map((card,ind) => (
           <div key={ind} onClick={onOpen}
             id="box-shadow"
-            className="p-3 flex items-center gap-5 w-[25%] rounded-lg font-bold border-[1px] border-[gray]"
+            className="p-3 flex items-center gap-5 min-w-[220px] w-[25%] max-lg:w-[100%] rounded-lg font-bold border-[1px] border-[gray]"
           >
             <Image
               className=""
@@ -51,7 +51,7 @@ function ShowPodcast({ Project }) {
         ))}
       </div>
       <div className="my-[30px] rounded-lg bg-[#7E22CE] flex justify-between items-center py-4 px-6">
-        <p className="text-white text-[20px] font-semibold">
+        <p className="text-white text-[20px] max-lg:text-[15px] font-semibold">
           All files are processed! Your widget is ready to go!
         </p>
         <button className="text-[#7E22CE] bg-white py-2 px-3 font-semibold rounded-lg">

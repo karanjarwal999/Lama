@@ -13,22 +13,22 @@ function RenderProjects({ projects }) {
   let colors = ["#7E22CE","#F8A01D","#6366F1","#F8A01D","#6366F1","#7E22CE","#7E22CE","#6366F1","#F8A01D","#7E22CE","#F8A01D","#6366F1","#F8A01D","#6366F1","#7E22CE","#7E22CE","#6366F1","#F8A01D"];
 
   return (
-    <div className="w-[1170px] mx-auto ">
-      <div className="flex justify-between items-center mb-[20px]">
+    <div className="max-w-[1170px] mx-auto ">
+      <div className="flex items-start flex-col  sm:flex-row sm:justify-between sm:items-center mb-[20px]">
         <h2 className="text-[#7E22CE] text-[60px] font-bold">Projects</h2>
         <button
           onClick={onOpen}
-          className="flex items-center gap-3 bg-black text-white px-[15px] py-[7px] rounded-[10px] text-[22px]"
+          className="flex items-center gap-3  text-white  px-[15px] py-[7px] rounded-[10px] text-[22px] bg-black hover:text-black hover:bg-white hover:border-[2px] border-black"
         >
           <FiPlusCircle size={"25px"} />
           Create New Project
         </button>
       </div>
-      <div className="grid grid-cols-3 gap-[40px]">
+      <div className="flex flex-col gap-x-[4%] gap-y-[40px] sm:grid sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, ind) => (
-          <div onClick={()=>router.push(`/project/Uplode?id=${project._id}`)}  key={ind}
+          <div onClick={()=>router.push(`/project/Upload?id=${project._id}`)}  key={ind}
             id="box-shadow"
-            className="flex gap-5 cursor-pointer items-center rounded-[10px] p-[10px] border-2 border-gray"
+            className="flex gap-5 cursor-pointer items-center rounded-[10px] p-[10px] border-2 border-gray hover:border-purple-400"
           >
             <Avatar
               borderRadius={10}
@@ -39,7 +39,7 @@ function RenderProjects({ projects }) {
               height={"100px"}
               bg={colors[ind]}
               name={project.name}
-              src="https://bit.ly/dan-abramv"
+              src={project.image}
             />
             <div>
               <h4 className="text-25px font-bold capitalize text-[#7E22CE]">

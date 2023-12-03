@@ -54,3 +54,46 @@ code {
 #custom-file-input:active::before {
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }
+.navLink{
+  display: none;
+ }
+ 
+ @media screen and  (max-width:800px) {
+   .navLink{
+     display: block;
+   }
+   .navText{
+     display: none;
+   }
+   .navAccount>span{
+     display: none;
+   }
+   .navLogo>span{
+     display: none;
+   }
+   .navLogo{
+     margin-bottom: 40px;
+   }
+   .navtitle{
+    display: none;
+   }
+   .navbar{
+     width: 60px !important;
+   }
+   #active{
+    background-color: #7E22CE;
+    color: white;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    padding: 0px;
+}
+ }
+ @media screen and  (max-width:700px) {
+   th{
+     padding-left: 5px !important;
+     padding-right: 5px !important;
+   }
+ }

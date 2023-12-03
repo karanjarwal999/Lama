@@ -14,8 +14,8 @@ function HorizontalLocater() {
     
   return (
     <div className='flex justify-between ' >
-      <h3 className='flex gap-3 items-center text-[#7E22CE] text-[25px]'><AiOutlineHome size={"25px"}/> <span className='font-semibold capitalize'>{Project?.name}</span> / <span className='font-semibold'>{pathname[pathname.length-1]}</span></h3>
-      <div className='flex items-center gap-[10px]'><IoMdArrowDropdown /><span className='text-[15px] font-bold'>EN</span>
+      <h3 className='flex gap-2 items-center text-[#7E22CE] text-[25px] max-lg:text-[20px] max-sm:text-[15px]'><AiOutlineHome size={"25px"}/> <span className='font-semibold capitalize'>{Project?.name}</span>/<span className='font-semibold'>{pathname[pathname.length-1]}</span></h3>
+      <div className='flex items-center gap-[10px] max-sm:gap-[5px]'><IoMdArrowDropdown /><span className='text-[15px] font-bold'>EN</span>
       <Image
         className="m-auto"
         src="/language.svg"

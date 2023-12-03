@@ -14,12 +14,10 @@ function NoProject() {
       <h2 className="text-center text-[50px] font-bold text-[#7E22CE] ">
         Create a New Project
       </h2>
-      <Image
-        className="m-auto"
+      <img
+        className="m-auto h-[271px] w-[405px]"
         src="/boyOnDesk.svg"
         alt="Example SVG"
-        width={405}
-        height={271}
       />
       <p className="text-[20px] text-center">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

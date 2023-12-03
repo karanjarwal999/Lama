@@ -28,11 +28,11 @@ function Transcript() {
 
       function handleSave() {
          dispatch(updatePodcast(Podcast.id,{description:newdes},showToast))
-         router.push('/project/Uplode')
+         router.push('/project/Upload')
       }
 
     async function fetchpodcast(id) {
-        let res = await axios.get(`${api}/api/podcast?id=${id}`)
+        let res = await axios.get(`/api/podcast?id=${id}`)
         let data= await res 
         data=data.data.data
         setPodcast({id:data._id,title:data.title,description:data.description})

@@ -22,12 +22,12 @@ function NOPodcast() {
 
   return (
     <div>
-        <h3 className="text-[#7E22CE] font-bold text-[40px] my-4">Uplode</h3>
-      <div className="flex justify-between">
+      <h3 className="text-[#7E22CE] font-bold text-[40px] my-4 max-lg:my-2">Uplode</h3>
+      <div className="grid grid-cols-3 gap-y-5 max-lg:gap-y-3 max-lg:grid-cols-2">
         {uplodeOption.map((card,ind) => (
           <div key={ind} onClick={onOpen}
             id="box-shadow"
-            className="p-3 flex items-center gap-5 w-[28%] rounded-lg font-bold border-[1px] border-[gray]"
+            className="p-3 max-sm:p-1 max-sm:px-2 flex justify-self-center items-center gap-5 max-xl:gap-2 max-w-[300px] w-[90%]  rounded-lg font-bold max-sm:font-semibold max-sm:text-[12px] border-[1px] border-[gray]"
           >
             <Image
               className=""
@@ -42,12 +42,10 @@ function NOPodcast() {
             </div>
           </div>
         ))}
-      </div>
-      <div className="flex justify-between mt-5">
         {uplodeOption.map((card,ind) => (
           <div key={ind}  onClick={onOpen}
             id="box-shadow"
-            className="p-3 flex items-center gap-5 w-[28%] rounded-lg font-bold border-[1px] border-[gray]"
+            className="p-3 max-sm:p-1 max-sm:px-2 flex justify-self-center items-center gap-5 max-xl:gap-2 max-w-[300px] w-[90%] rounded-lg font-bold border-[1px] max-sm:font-semibold max-sm:text-[12px] border-[gray]"
           >
             <Image
               className=""
@@ -63,8 +61,8 @@ function NOPodcast() {
           </div>
         ))}
       </div>
-      <p className="text-center my-5 text-[gray] text-[30px]">or</p>
-      <div className="border-dotted border-[2px] border-[gray] py-[20px] rounded-lg">
+      <p className="text-center my-5 max-lg:my-3 text-[gray] text-[30px]">or</p>
+      <div className="border-dotted border-[2px] border-[gray] py-[20px] rounded-lg max-lg:pt-0">
         <svg
           width="128"
           height="129"

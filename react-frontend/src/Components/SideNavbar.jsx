@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { IoSettingsOutline } from "react-icons/io5";
 import { TbCircleNumber1,TbCircleNumber2,TbCircleNumber3,TbCircleNumber4 } from "react-icons/tb";
 import HorizontalLocater from "./HorizontalLocater";
+import { GoProjectRoadmap } from "react-icons/go";
+import { MdAttachMoney, MdOutlineWidgets } from "react-icons/md";
+import { FaLink } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 
@@ -13,9 +16,9 @@ function SideNavbar({ children }) {
 
   return (
     <div className="flex">
-      <div className="w-[400px] bg-[#F3E8FF] min-h-[100vh] p-[20px] flex flex-col justify-between">
+      <div className="navbar w-[400px] max-xl:w-[270px] bg-[#F3E8FF] min-h-[100vh] p-[20px]  max-xl:p-[10px] flex flex-col justify-between">
         <nav className="text-[18px]">
-          <h1  onClick={()=>navigate('/')} className="cursor-pointer flex gap-2 text-[#7E22CE] text-[36px] font-extrabold">
+          <Link  to='/' className="navLogo cursor-pointer flex gap-2 text-[#7E22CE] text-[36px] font-extrabold">
             <svg
               width="53"
               height="53"
@@ -32,21 +35,28 @@ function SideNavbar({ children }) {
                 d="M34.3463 16.9308L16.1163 25.1431C14.0688 26.0678 11.9992 23.8661 13.056 21.8846L19.7491 9.18088C22.5893 3.78675 30.2952 3.78675 33.1354 9.18088L35.4912 13.6723C36.1076 14.8832 35.6013 16.3584 34.3463 16.9308Z"
                 fill="#7E22CE"
               />
-            </svg>
-            LAMA.
-          </h1>
-          <p className="py-2 my-2">Podcast Uplode Flow</p>
-          <Link to={"/Uplode"} id={(location.pathname=='/Uplode'|| location.pathname=='/Transcript')?"active":'notActive'} className="flex gap-4 items-center py-3 px-3" ><TbCircleNumber1  size={"25px"} />Projects</Link>
-          <Link to={"/Widget_Configurations"} id={location.pathname=='/Widget_Configurations'?"active":'notActive'} className="flex gap-4 items-center py-3 px-3" ><TbCircleNumber2 size={"25px"} />Widget Configurations</Link>
-          <Link to={"#"} className="cursor-not-allowed flex gap-4 items-center py-3 px-3 bg-gray-100 rounded-[50px]" ><TbCircleNumber3 size={"25px"} />Deployment</Link>
-          <Link to={"#"} className="cursor-not-allowed flex gap-4 items-center py-3 px-3 border-b-2 border-gray-300" ><TbCircleNumber4 size={"25px"} /> Pricing</Link>
+            </svg><span> LAMA.</span>
+           
+          </Link>
+
+          <p className="navtitle py-2 my-2 ml-5 max-md:ml-1">Podcast Uplode Flow</p>
+
+          <Link to={"/Upload"} id={(location.pathname=='/Upload'|| location.pathname=='/Transcript')?"active":'notActive'} className="navText flex gap-4 max-xl:gap-1 items-center py-3 px-3 max-md:px-1" ><TbCircleNumber1  size={"25px"} />Projects</Link>
+          <Link to={"/Widget_Configurations"} id={location.pathname=='/Widget_Configurations'?"active":'notActive'} className="navText flex gap-4 max-xl:gap-1 items-center py-3 px-3 max-md:px-1" ><TbCircleNumber2 size={"25px"} />Widget Configurations</Link>
+          <Link to={"#"} className="navText cursor-not-allowed flex gap-4 max-xl:gap-1 items-center py-3 px-3 max-md:px-1 bg-gray-100 rounded-[50px]" ><TbCircleNumber3 size={"25px"} />Deployment</Link>
+          <Link to={"#"} className="navText cursor-not-allowed flex gap-4 max-xl:gap-1 items-center py-3 px-3 max-md:px-1 border-b-2 border-gray-300" ><TbCircleNumber4 size={"25px"} /> Pricing</Link>
+         
+          <Link to={"/Upload"} id={(location.pathname=='/Upload'|| location.pathname=='/Transcript')?"active":'notActive'} className="navLink py-3" ><GoProjectRoadmap size={'35px'}/></Link>
+          <Link to={"/Widget_Configurations"} id={location.pathname=='/Widget_Configurations'?"active":'notActive'} className="navLink py-3" ><MdOutlineWidgets size={'35px'}/></Link>
+          <Link to={"#"} className="navLink cursor-not-allowed py-3 " ><FaLink size={'35px'}/></Link>
+          <Link to={"#"} className="navLink cursor-not-allowed py-3 " ><MdAttachMoney size={'35px'}/></Link>
         </nav>
         <Link to={"/Account"} id={location.pathname=='/Account'?"active":'notActive'}
-          className=" flex gap-4 p-[10px] border-t-2 border-gray-300 items-center text-[18px]">
-          <IoSettingsOutline size={"25px"} /> Settings
+          className="navAccount flex gap-4 max-xl:gap-1 p-[10px] border-t-2 max-md:px-1 border-gray-300 items-center text-[18px]">
+          <IoSettingsOutline size={"25px"} /> <span>Settings</span>
         </Link>
       </div>
-      <main className="p-[40px] flex-1">
+      <main className="p-[40px] flex-1 max-xl:p-[20px] max-xl:pb-[0px] max-sm:px-1">
         <HorizontalLocater/>
         {children}</main>
     </div>

@@ -33,18 +33,16 @@ export default function Home() {
 
 
   return (
-    <main className='px-10 py-7 '>
-
+    <main className='px-5 py-5 md:px-10 '>
       {/* top navbar */}
       <TopNavbar/>
       
       <div>
-        <button className=' py-1 px-3 ml-[9vw] mt-[25px] rounded-[20px] border-[2px] flex gap-2 items-center justify-center text-black text-[21px]'><IoHomeOutline size={'29px'} color='black'/> Back to Home</button>
+        <button className=' py-1 px-3 ml-0 lg:ml-[9vw] mt-[25px] rounded-[20px] border-[2px] flex gap-2 items-center justify-center text-black text-[21px]'><IoHomeOutline size={'29px'} color='black'/> Back to Home</button>
          
          {/* if project length is 0 the showing no projects com. else render all projects */}
          {projects.length==0 ?<NoProject />:
-         <RenderProjects
-          projects={projects}/>}
+         <RenderProjects projects={projects}/>}
       </div>
 
       {/* modal to take user name and email */}

@@ -24,17 +24,17 @@ function Account() {
 
   return (
     <SideNavbar>
-      <h3 className="text-[#7E22CE] text-[40px] font-bold my-4">
+      <h3 className="text-[#7E22CE] text-[40px] font-bold my-4 max-lg:text-[30px]">
         Account Settings
       </h3>
-      <div className="flex gap-5 items-center my-4">
+      <div className="flex gap-5 items-center my-4 max-sm:flex-col max-sm:items-start">
         <img
-        className="w-[100px] h-[100px]"
           src="/dummyProfile.svg"
           alt="profile image"
+          className="w-[100px] h-[100px]"
         />
         <div className="flex-1 ">
-          <form className="grid grid-cols-2 gap-x-5">
+          <form className="grid grid-cols-2 gap-x-5  max-sm:flex max-sm:flex-col">
             <label className="font-bold" htmlFor="username">
               User Name
             </label>
@@ -68,10 +68,10 @@ function Account() {
         </div>
       ) : null}
 
-      <h3 className="text-[#7E22CE] my-4 text-[40px] font-bold">
+      <h3 className="text-[#7E22CE] my-4 text-[40px] font-bold max-lg:text-[30px]">
         Subscriptions
       </h3>
-      <div className="bg-gradient-to-r from-[#7E22CE] to-[#460281] my-4 text-white rounded-md p-[20px] flex justify-between items-center text-[25px]">
+      <div className="bg-gradient-to-r from-[#7E22CE] to-[#460281] my-4 text-white rounded-md p-[20px] flex justify-between max-lg:flex-col max-lg:items-start items-center text-[25px] max-lg:text-[20px]">
         <h4>
           You are currently on the{" "}
           <span className=" font-bold underline ">Ques AI Basic Plan!</span>
